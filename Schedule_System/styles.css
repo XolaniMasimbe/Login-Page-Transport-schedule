@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light grey background */
+}
+
+/* Heading Styles */
+.heading-container {
+    text-align: center;
+    background-color: #003366; /* Dark blue background */
+    color: white;
+    padding: 20px;
+}
+
+.slideshow-heading {
+    font-size: 2.5em;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Form Styles */
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    color: #003366; /* Dark blue */
+    text-align: center;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #003366; /* Dark blue */
+}
+
+.input-group input {
+    width: calc(100% - 20px); /* Adjust width to account for padding and icon */
+    padding: 10px 10px 10px 40px; /* Adjust as needed */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #003366; /* Dark blue */
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.input-group input:focus + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.75em;
+    color: #003366; /* Dark blue */
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #003366; /* Dark blue */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #002244; /* Even darker blue */
+}
+
+.recover {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.recover a {
+    color: #003366; /* Dark blue */
+    text-decoration: none;
+}
+
+.recover a:hover {
+    text-decoration: underline;
+}
+
+/* About Section */
+.about-container {
+    background: #003366; /* Dark blue */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+/* Logo Container */
+.logo-container {
+    position: absolute; /* Position the container absolutely */
+    top: 0; /* Align it to the top of the page */
+    left: 0; /* Align it to the left of the page */
+    padding: 10px; /* Add some padding around the image */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.logo {
+    display: block; /* Ensure the image is treated as a block element */
+    max-width: 300px; /* Adjust the size of the image as needed */
+    height: auto; /* Maintain the aspect ratio of the image */
+}
+
+/* Styles for the Slideshow */
+.slideshow {
+    position: fixed; /* To ensure it stays in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Hide overflowed images */
+    z-index: -1; /* Ensure it stays in the background */
+}
+
+/* Styles for the Slideshow */
+.slideshow {
+    position: fixed; /* To ensure it stays in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Hide overflowed images */
+    z-index: -1; /* Ensure it stays in the background */
+}
+
+.slideshow-images {
+    position: relative;
+    width: 300%; /* Adjust based on number of images */
+    height: 100%;
+    display: flex;
+    animation: slide 15s infinite; /* Adjust timing as needed */
+}
+
+.slideshow-images .slide {
+    flex: 1 0 100%; /* Adjust to cover the full container */
+    height: 100%;
+    position: absolute;
+    opacity: 0; /* Initially hide images */
+    transition: opacity 1s ease-in-out; /* Smooth transition for fading */
+}
+
+.slideshow-images .slide:nth-child(1) { 
+    opacity: 1; /* First image is visible initially */
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+
+
+
